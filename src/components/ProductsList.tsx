@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ViewDetails from "./ViewDetails";
 import AddToCartButton from "./AddToCartButton";
+import ProductDescription from "./ProductDescription";
 
 interface IProduct {
   id: number;
@@ -51,7 +52,7 @@ export default async function ProductsList({ filterValue }: IProps) {
             <h1 className="font-semibold text-gray-800 text-lg text-center h-[60px] line-clamp-2">
               {item.title}
             </h1>
-
+            <ProductDescription text={item.description} />
             <p className="text-sm text-gray-500 text-center mt-1">
               {item.category}
             </p>
